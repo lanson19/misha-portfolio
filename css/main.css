@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+}
+
+/* Navbar Stuff */
+.navbar-brand {
+    padding-left: 50px;
+    padding-top: 10px;
+    font-size: 35px;
+}
+
+.bg-light {
+    background-color: lightgrey !important;
+}
+
+/* About Page */
+.front-section {
+    height: 100vh;
+}
+
+.front-section .nav-item{
+    font-size: 20px;
+}
+
+.center-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+}
+
+.front h1 {
+    font-size: 100px;
+    margin: 0;
+}
+
+.front h2 {
+    margin: 0;
+    font-size: 50px;
+}
+
+.front h3 {
+    margin: 0;
+}
+
+/* About Section */
+.hide {
+  opacity: 0;
+  transition: all 2s;
+}
+
+.slideUp {
+  transform: translate(0, 100px);
+}
+
+.hide.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.about-section {
+    min-height: 100vh;
+    
+}
+
+.about {
+    margin: auto;
+    padding: 0% 25%;
+}
+
+.about h1 {
+    font-size: 80px;
+}
+
+.about p {
+    font-size: 30px;
+}
+
+/* Projects Section */
+.project-section {
+    min-height: 100vh;
+    background-color: lightblue;
+}
+
+.project {
+    margin: auto;
+    padding: 0% 25%;
+}
+
+.project h1 {
+    font-size: 80px;
+}
+
+.picContainer{
+    position: relative;
+    background-color: red;
+    margin-top: 5%;
+}
+
+.picContainer img{
+    width: 40%;
+}
+
+.picContainer img {  
+-webkit-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+transition-duration: .25s;
+}
+
+.picContainer:hover img{
+-webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0.5);
+-moz-box-shadow: 0 0 0 0 rgba(0,0,0,0.5);
+box-shadow: 0 0 0 0px rgba(0,0,0,0.5);
+transition-duration: .25s;
+}
+
+.picOverlay {
+opacity: 0;
+transition-property: opacity;
+transition-duration: .3s;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: rgba(70, 70, 67, .8);
+color: white;
+font-size: 2em;
+}
+
+
+.picOverlay:hover {
+opacity: 0.6;
+}
