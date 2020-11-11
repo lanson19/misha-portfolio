@@ -5,7 +5,7 @@
 }
 
 body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 /* Navbar Stuff */
 .navbar-brand {
@@ -135,7 +135,6 @@ body {
 }
 
 .project-div {
-    margin: auto;
     text-align: center;
     padding-bottom: 50px;
 }
@@ -144,22 +143,73 @@ body {
     font-size: 80px;
 }
 
-.project {
-    background-color: red;
-    margin: auto;
-    width: 70vw;
+.project-container {
     display: flex;
-    padding: 50px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.project img {
-    width: 30%;
+.pic-container {
+    width: 450px;
+    height: 450px;
+    margin: 30px;
+    position: relative;
+    display: inline-block;
 }
 
-.p1 {
-    justify-content: flex-start;
+.pic-container img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
 }
 
-.p2 {
-    justify-content: flex-end;
+.pic-overlay {
+    position: absolute;
+    transition: all .3s ease;
+    opacity: 0;
+}
+
+.pic-container:hover .pic-overlay {
+    opacity: .85;
+}
+
+.text {
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+    font-size: 50px;
+}
+
+.overlay-fade {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pic-container:hover .overlay-fade {
+    width: 100%;
+}
+
+
+.pic-container img {  
+    -webkit-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+    transition-duration: .25s;
+}
+
+.pic-container:hover img{
+    -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 0 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 0 0px rgba(0,0,0,0.5);
+    transition-duration: .25s;
 }
