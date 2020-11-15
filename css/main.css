@@ -102,16 +102,13 @@ body {
   transition: all 2s;
 }
 
-
-
 .hide.visible {
     opacity: 1;
     transform: translate(0, 0);
 }
 
 .about-section {
-    min-height: 100vh;
-    
+    min-height: 100vh;   
 }
 
 .about {
@@ -130,6 +127,7 @@ body {
 
 /* Projects Section */
 .project-section {
+    margin-top: -100px;
     min-height: 100vh;
     /* background-color: lightblue; */
 }
@@ -146,15 +144,17 @@ body {
 .project-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    text-align: center;
 }
 
 .pic-container {
     width: 450px;
     height: 450px;
-    margin: 30px;
+    margin: 40px;
     position: relative;
     display: inline-block;
+    justify-content: center;
 }
 
 .pic-container img {
@@ -182,7 +182,10 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: grey;
-    font-size: 50px;
+    width: 80%;
+    height: 30%;
+    font-size: 40px;
+    text-align: center;
 }
 
 .overlay-fade {
@@ -199,7 +202,6 @@ body {
     width: 100%;
 }
 
-
 .pic-container img {  
     -webkit-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
@@ -212,4 +214,97 @@ body {
     -moz-box-shadow: 0 0 0 0 rgba(0,0,0,0.5);
     box-shadow: 0 0 0 0px rgba(0,0,0,0.5);
     transition-duration: .25s;
+}
+
+/* Modal Section */
+.modal {
+    background-color: transparent;
+    border-radius: 100px;
+}
+
+.modal-content {
+    -webkit-border-radius: 100px !important;
+    -moz-border-radius: 100px !important;
+    border-radius: 100px !important; 
+}
+
+.modal-header {
+    border-bottom: 0 none;
+}
+
+.modal-footer {
+    border-top: 0 none;
+}
+
+.modal-body {
+    display: flexbox;
+}
+
+.modal-pic {
+    display: flex;
+    padding-top: 10px;
+}
+
+.modal-pic h5{
+    padding-left: 10px;
+}
+
+.modal-pic img {
+    max-width: 40%;
+}
+
+
+/* Contact Me Section */
+.contact-section {
+    min-height: 60vh;
+}
+
+.contact-div {
+    padding-top: 100px;
+}
+
+.contact-div h1 {
+    font-size: 80px;
+    text-align: center;
+}
+
+.media {
+    padding-top: 80px;
+    display: flexbox;
+    justify-content: space-around;
+}
+
+.contact {
+    position: relative;
+    text-align: center;
+}
+
+.contact-btn {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.contact-btn:focus {
+    border: none;
+    outline: none;
+}
+
+.media img {
+    width: 40%;
+}
+
+.hidden-text {
+    display: none;
 }
